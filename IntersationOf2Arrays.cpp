@@ -1,3 +1,10 @@
+/*
+* W.A.P to get the intersaction of items from two arrays.
+* ex. arr1 = [1,2, 3, 4]
+*     arr2 = [4, 2, 5, 7, 8]
+*   output = [2]
+*/
+
 #include<iostream>
 using namespace std;
 
