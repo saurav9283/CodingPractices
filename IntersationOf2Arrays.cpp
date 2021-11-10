@@ -8,8 +8,9 @@
 #include<iostream>
 using namespace std;
 
-bool checkarray1in2(int arr1[] , int arr2[] , int n1 , int n2)
+int* checkarray1in2(int arr1[] , int arr2[] , int n1 , int n2)
 {
+    int *result = new int[10];
     for(int i=0 ; i<n1 ; i++)
     {
         for(int j=0 ; j<n2 ; j++)
@@ -21,15 +22,18 @@ bool checkarray1in2(int arr1[] , int arr2[] , int n1 , int n2)
             }
         }
     }
-    return true;
+    return result;
 }
 
 int main()
 {
-    int arr1[] = {100 , 3, 2, 200};
+    int arr1[] = {1 , 3, 2, 200};
     int arr2[] = {2 , 10, 15, 5, 6, 3, 1};
     int n1 = sizeof(arr1)/sizeof(arr1[0]);
     int n2 = sizeof(arr2)/sizeof(arr2[0]);
-    checkarray1in2(arr1 , arr2, n1 , n2);
-    
+    int *result = checkarray1in2(arr1 , arr2, n1 , n2);
+    // int n = sizeof(result) / sizeof(result[0]);
+    // for (int i = 0; i < 3; i++) {
+    //     cout << *(result + i) << endl;
+    // }
 }
